@@ -1,0 +1,84 @@
+### Get all Films
+GET http://localhost:3000/api/films HTTP/1.1
+
+### Get Film by ID
+GET http://localhost:3000/api/films/{id} HTTP/1.1
+
+### Create Film
+POST http://localhost:3000/api/films HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Avatar 2",
+    "releaseYear": 2023, 
+    "genre": "Action, Fantasy, Sci-Fi",
+    "directors": [{directorID}, {directorID}]
+}
+
+### Update Film by ID
+PUT http://localhost:3000/api/films/{id} HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Updated Film",
+    "director": "Updated Director Name",
+    "releaseDate": "2022-01-01"
+}
+
+### Delete Film by ID
+DELETE http://localhost:3000/api/films/{id} HTTP/1.1
+
+### Get all Directors
+GET http://localhost:3000/api/directors HTTP/1.1
+
+### Get Director by ID
+GET http://localhost:3000/api/directors/{id} HTTP/1.1
+
+### Create Director
+POST http://localhost:3000/api/directors HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "George Abbott",
+    "birthDate": "1990-10-20",
+    "bibliographie": "Idk"
+}
+
+### Update Director by ID
+PUT http://localhost:3000/api/directors/{id} HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "{new name}",
+}
+
+### Delete Director by ID
+DELETE http://localhost:3000/api/directors/{id} HTTP/1.1
+
+### Get all Sessions
+GET http://localhost:3000/api/sessions HTTP/1.1
+
+### Get Session by ID
+GET http://localhost:3000/api/sessions/{id} HTTP/1.1
+
+### Create Session
+POST http://localhost:3000/api/sessions HTTP/1.1
+Content-Type: application/json
+
+{
+    "film": "{filmID}",
+    "date": "2014-06-11", 
+    "time": "1h30",
+    "availableSeats": 500
+}
+
+### Update Session by ID
+PUT http://localhost:3000/api/sessions/{id} HTTP/1.1
+Content-Type: application/json
+
+{
+    "time": "2h10"
+}
+
+### Delete Session by ID
+DELETE http://localhost:3000/api/sessions/{id} HTTP/1.1
